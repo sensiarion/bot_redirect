@@ -4,6 +4,7 @@ import json
 from flask import Flask
 from flask import request
 import requests
+
 app = Flask(__name__)
 
 
@@ -24,8 +25,8 @@ def redirect():
         else:
             print(response.json())
     else:
-        return json.dumps({'error':'wrong request was sended'})
+        return json.dumps({'error': 'wrong request was sended'})
 
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc',host='0.0.0.0',port=443)
+    app.run(host='0.0.0.0', port=80)
