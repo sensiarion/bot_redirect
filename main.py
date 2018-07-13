@@ -24,9 +24,8 @@ def redirect():
         else:
             print(response.json())
     else:
-        return json.dumps({'error': 'wrong request was sended',
-                           'status': 400})
+        return json.dumps({'error':'wrong request was sended'})
 
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc',port=80)
+    app.run(ssl_context='adhoc',host='0.0.0.0')
