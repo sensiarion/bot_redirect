@@ -23,7 +23,7 @@ def redirect():
         if response.status_code == 200:
             return response
         else:
-            print(response.json())
+            print(response.text)
     else:
         return json.dumps({'error': 'wrong request was sended'})
 
